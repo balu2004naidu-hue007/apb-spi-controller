@@ -1,0 +1,31 @@
+SPI-X PROPOSAL-ALIGNED PROJECT
+
+1. Extract this ZIP to a folder such as C:\SPI-X.
+2. Open PowerShell in the extracted folder (the folder containing this file).
+3. Run the complete software validation:
+
+   .\scripts\run_all_checks.ps1
+
+The project includes RTL, the 12-register APB map, embedded C driver/demo,
+Python reference tests, SystemVerilog testbenches, bounded formal harnesses,
+waveform checks, synthesis/target files, and documentation. See README.md and
+docs\register_map.md for the specification and build/test details.
+
+TOOLS
+The validation scripts use the project-local tools under work\tools when
+present, then fall back to tools installed on PATH or at the configured MSYS2
+locations. A source-only download does not carry the large tool binaries.
+Install Python 3 and a C/C++ compiler for the host checks. Verilator and Yosys
+are needed for lint/synthesis and the compiled simulations; nextpnr-ice40 and
+icetime are used by the optional iCE40 place/route/timing check.
+
+KNOWN ENVIRONMENT BEHAVIOR
+Icarus writes a fresh image but its compiler process exits abnormally on this
+Windows installation. The script runs that fresh image with VVP; the current
+simulation and waveform checks pass. Verilator is also available as a clean
+simulation route.
+
+SCOPE
+This software project has no physical board requirement. A full static
+CDC/MTBF sign-off for the generic external SPI clock still requires a
+dedicated product-level CDC review.

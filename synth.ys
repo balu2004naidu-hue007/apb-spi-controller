@@ -1,0 +1,11 @@
+read_verilog -sv rtl/reset_sync.sv rtl/async_fifo.sv rtl/sync_fifo.sv rtl/spi_master.sv rtl/spi_slave.sv rtl/spi_x_top.sv
+hierarchy -check -top spi_x_top
+proc
+check
+opt
+memory
+opt
+techmap
+opt
+check
+stat

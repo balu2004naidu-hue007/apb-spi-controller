@@ -1,0 +1,11 @@
+# iCEBreaker v1.x UP5K-SG48 board assignments.
+# 12 MHz oscillator and PMOD 1A pin numbers are from the board/iCE40 reference.
+set_io -nowarn clk_12m 35
+set_io -nowarn btn_n 10
+set_io -nowarn adc_sclk 4
+set_io -nowarn adc_mosi 2
+set_io -nowarn adc_miso 47
+set_io -nowarn adc_cs_n 45
+set_io -nowarn led_r_n 11
+set_io -nowarn led_g_n 37
+set_frequency clk_12m 12

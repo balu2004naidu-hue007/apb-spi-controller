@@ -1,0 +1,15 @@
+# Local tool installations, logs and generated simulation/synthesis products.
+/work/
+/spi_x.vcd
+*.vcd
+*.o
+*.obj
+*.exe
+*.asc
+*.json
+*.bin
+*.vvp
+*.fst
+*.log
+__pycache__/
+*.py[cod]

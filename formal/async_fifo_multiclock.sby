@@ -1,0 +1,15 @@
+[options]
+mode bmc
+depth 20
+multiclock on
+
+[engines]
+smtbmc boolector
+
+[script]
+read -formal -sv async_fifo.sv async_fifo_multiclock.sv
+prep -top async_fifo_multiclock
+
+[files]
+rtl/async_fifo.sv
+formal/async_fifo_multiclock.sv
